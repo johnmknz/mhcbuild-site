@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MHC BUILD | Land Development for Texas Manufactured Housing Communities</title>
+<meta name="description" content="MHC BUILD manages land development for manufactured housing communities in Texas, from entitlements through finished lots, including on-site wastewater treatment plants and TCEQ permitting.">
+<link rel="canonical" href="https://mhcbuild.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mhcbuild.com/">
+<meta property="og:title" content="MHC BUILD | Land Development for Texas Manufactured Housing Communities">
+<meta property="og:description" content="From entitlements through finished lots, including on-site wastewater treatment plants and TCEQ permitting.">
+<meta name="theme-color" content="#12284A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none'%3E%3Ccircle cx='50' cy='50' r='48' fill='%2312284A'/%3E%3Ccircle cx='50' cy='50' r='37' stroke='%23FFFFFF' stroke-width='3.5'/%3E%3Cpath d='M50,13 V23 M87,50 H77 M50,87 V77 M13,50 H23' stroke='%23FFFFFF' stroke-width='3.5'/%3E%3Cpolygon points='50,28 55.39,42.58 70.92,43.2 58.72,52.83 62.93,67.8 50,59.17 37.07,67.8 41.28,52.83 29.08,43.2 44.61,42.58' fill='%23E0763A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #12284A;
+  --mist: #EDF0F4;
+  --rust: #B4501E;
+  --rust-text: #A3471A;
+  --rust-light: #E0763A;
+  --peach: #F0A074;
+  --slate: #43536B;
+  --pale: #D5DCE7;
+  --sans: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: #FFFFFF;
+  color: var(--navy);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.55;
+}
+h1, h2, h3, p { margin: 0; }
+a:focus-visible { outline: 3px solid var(--rust-light); outline-offset: 3px; }
+.wrap { max-width: 1160px; margin: 0 auto; padding-inline: 24px; }
+.navy { background: var(--navy); color: #FFFFFF; }
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.h2 {
+  font-size: clamp(28px, 3.2vw, 44px);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  padding: 12px 16px;
+  background: #FFFFFF;
+  color: var(--navy);
+  font-weight: 700;
+}
+.skip:focus { left: 8px; top: 8px; z-index: 10; }
+
+/* Header */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding-block: 20px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.brand svg { flex-shrink: 0; }
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 28px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.nav a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.nav .phone {
+  color: var(--peach);
+  font-family: var(--mono);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 48px 56px;
+  padding-block: clamp(36px, 5vw, 72px) clamp(56px, 7vw, 104px);
+}
+.hero-text { flex: 1 1 460px; min-width: 0; }
+.hero-art { flex: 1 1 380px; min-width: 0; display: flex; justify-content: center; }
+.hero-art svg { width: 100%; max-width: 540px; height: auto; }
+.hero .eyebrow { color: var(--peach); }
+.hero h1 {
+  margin-top: 18px;
+  font-size: clamp(34px, 4.6vw, 62px);
+  line-height: 1.06;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+.hero p {
+  margin-top: 24px;
+  max-width: 33em;
+  font-size: clamp(17px, 1.5vw, 20px);
+  color: var(--pale);
+  text-wrap: pretty;
+}
+.actions { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 14px; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 52px;
+  padding: 0 26px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.btn-primary { background: var(--rust); border-color: var(--rust); }
+.btn-primary:hover { background: #9C4318; border-color: #9C4318; }
+.btn-outline { border-color: #FFFFFF; }
+.btn-outline:hover { background: #FFFFFF; color: var(--navy); }
+
+/* Facts */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: 36px 48px;
+  padding-block: clamp(44px, 5vw, 72px);
+}
+.fact { display: flex; flex-direction: column; gap: 8px; }
+.fact-figure {
+  font-size: clamp(40px, 3.4vw, 48px);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.fact-rule { width: 56px; height: 3px; background: var(--rust); }
+.fact p { color: var(--slate); text-wrap: pretty; }
+
+/* Services */
+.services { background: var(--mist); }
+.services .wrap { padding-block: clamp(56px, 7vw, 96px); }
+.services .eyebrow { color: var(--rust-text); }
+.services .h2 { margin-top: 14px; }
+.service-list {
+  margin: clamp(32px, 4vw, 52px) 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 0 40px;
+}
+.service { border-top: 2px solid var(--navy); padding: 20px 0 36px; }
+.service-no {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--rust-text);
+}
+.service h3 { margin-top: 10px; font-size: 21px; line-height: 1.25; font-weight: 700; }
+.service p { margin-top: 8px; font-size: 16px; color: var(--slate); text-wrap: pretty; }
+
+/* Who we work with */
+.who {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 56px;
+  padding-block: clamp(56px, 7vw, 96px);
+}
+.who .h2 { flex: 1 1 300px; min-width: 0; }
+.who p {
+  flex: 2 1 420px;
+  min-width: 0;
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+/* Contact */
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 36px 64px;
+  padding-block: clamp(56px, 7vw, 96px);
+}
+.contact > svg { flex-shrink: 0; }
+.contact-text { flex: 1 1 360px; min-width: 0; }
+.contact-text p { margin-top: 14px; max-width: 32em; color: var(--pale); text-wrap: pretty; }
+.contact-links {
+  margin-top: 26px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 40px;
+  font-family: var(--mono);
+  font-size: clamp(18px, 1.8vw, 24px);
+  font-weight: 500;
+}
+.contact-links a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  color: #FFFFFF;
+  text-decoration: underline;
+  text-decoration-color: var(--rust-light);
+  text-underline-offset: 6px;
+}
+.contact-links a:hover { color: var(--peach); }
+.footer {
+  padding-block: 20px 28px;
+  border-top: 1px solid #3A4E6E;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #B9C3D3;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="navy">
+  <header class="wrap header">
+    <a class="brand" href="#top" aria-label="MHC BUILD home">
+      <svg width="44" height="44" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" stroke="#FFFFFF" stroke-width="4"/>
+        <circle cx="50" cy="50" r="35" stroke="#FFFFFF" stroke-width="2.5"/>
+        <path d="M50,15 V24 M85,50 H76 M50,85 V76 M15,50 H24" stroke="#FFFFFF" stroke-width="2.5"/>
+        <polygon points="50,28 55.39,42.58 70.92,43.2 58.72,52.83 62.93,67.8 50,59.17 37.07,67.8 41.28,52.83 29.08,43.2 44.61,42.58" fill="#E0763A"/>
+      </svg>
+      <span>MHC BUILD</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a class="phone" href="tel:+18328625100">832-862-5100</a>
+    </nav>
+  </header>
+
+  <div class="wrap hero">
+    <div class="hero-text">
+      <div class="eyebrow">Texas land development</div>
+      <h1>Land development for Texas manufactured housing communities.</h1>
+      <p>From entitlements through finished lots, including on-site wastewater treatment plants and TCEQ permitting.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="tel:+18328625100">Call 832-862-5100</a>
+        <a class="btn btn-outline" href="mailto:john@mhcbuild.com">john@mhcbuild.com</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 520 440" fill="none" role="img" aria-label="Plat of a manufactured housing community: fourteen lots along one street, with one lot highlighted">
+        <polygon points="229,48.7 292,51.4 292,200 229,200" fill="#E0763A"/>
+        <path d="M39.4,200 H481.8 M41.5,236 H479.6" stroke="#FFFFFF" stroke-opacity="0.75" stroke-width="1.5"/>
+        <path d="M103,43.2 V200 M166,45.9 V200 M229,48.7 V200 M292,51.4 V200 M355,54.1 V200 M418,56.9 V200 M103,236 V382.5 M166,236 V385.5 M229,236 V388.5 M292,236 V391.5 M355,236 V394.5 M418,236 V397.5" stroke="#FFFFFF" stroke-opacity="0.75" stroke-width="1.5"/>
+        <g stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1.2">
+          <rect x="59" y="92" width="24" height="76" rx="2"/>
+          <rect x="122.5" y="92" width="24" height="76" rx="2"/>
+          <rect x="185.5" y="92" width="24" height="76" rx="2"/>
+          <rect x="311.5" y="92" width="24" height="76" rx="2"/>
+          <rect x="374.5" y="92" width="24" height="76" rx="2"/>
+          <rect x="438" y="92" width="24" height="76" rx="2"/>
+          <rect x="60" y="268" width="24" height="76" rx="2"/>
+          <rect x="122.5" y="268" width="24" height="76" rx="2"/>
+          <rect x="185.5" y="268" width="24" height="76" rx="2"/>
+          <rect x="248.5" y="268" width="24" height="76" rx="2"/>
+          <rect x="311.5" y="268" width="24" height="76" rx="2"/>
+          <rect x="374.5" y="268" width="24" height="76" rx="2"/>
+          <rect x="437" y="268" width="24" height="76" rx="2"/>
+        </g>
+        <rect x="248.5" y="92" width="24" height="76" rx="2" stroke="#12284A" stroke-width="1.5"/>
+        <polygon points="30,40 490,60 470,400 50,380" stroke="#E0763A" stroke-width="2.25" stroke-dasharray="30 6 6 6 6 6"/>
+        <circle cx="30" cy="40" r="5" fill="#12284A" stroke="#E0763A" stroke-width="2.25"/>
+        <circle cx="490" cy="60" r="5" fill="#12284A" stroke="#E0763A" stroke-width="2.25"/>
+        <circle cx="470" cy="400" r="5" fill="#12284A" stroke="#E0763A" stroke-width="2.25"/>
+        <circle cx="50" cy="380" r="5" fill="#12284A" stroke="#E0763A" stroke-width="2.25"/>
+        <g fill="#FFFFFF" fill-opacity="0.7" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" text-anchor="middle" aria-hidden="true">
+          <text x="71" y="80">1</text>
+          <text x="134.5" y="80">2</text>
+          <text x="197.5" y="80">3</text>
+          <text x="323.5" y="80">5</text>
+          <text x="386.5" y="80">6</text>
+          <text x="450" y="80">7</text>
+          <text x="72" y="364">8</text>
+          <text x="134.5" y="364">9</text>
+          <text x="197.5" y="364">10</text>
+          <text x="260.5" y="364">11</text>
+          <text x="323.5" y="364">12</text>
+          <text x="386.5" y="364">13</text>
+          <text x="449" y="364">14</text>
+          <text x="260" y="222" font-size="10" letter-spacing="2">50' R.O.W.</text>
+        </g>
+        <text x="260.5" y="80" fill="#12284A" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" font-weight="500" text-anchor="middle" aria-hidden="true">4</text>
+        <text x="260" y="30" transform="rotate(2.49 260 30)" fill="#F0A074" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" letter-spacing="1.5" text-anchor="middle" aria-hidden="true">S 87°31' E  460.4'</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+  <section class="wrap facts" aria-label="At a glance">
+    <div class="fact">
+      <div class="fact-figure">1,000+</div>
+      <div class="fact-rule"></div>
+      <p>Finished lots delivered across Texas over our principal's career.</p>
+    </div>
+    <div class="fact">
+      <div class="fact-figure">20–40 acres</div>
+      <div class="fact-rule"></div>
+      <p>The community size we focus on.</p>
+    </div>
+    <div class="fact">
+      <div class="fact-figure">Texas only</div>
+      <div class="fact-rule"></div>
+      <p>Its cities, its counties and TCEQ are the only ones we work with.</p>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="eyebrow">What we handle</div>
+      <h2 class="h2">From raw land to finished lots.</h2>
+      <ol class="service-list">
+        <li class="service">
+          <div class="service-no" aria-hidden="true">01</div>
+          <h3>Site feasibility</h3>
+          <p>Lot yield, utilities, floodplain and cost checks before you commit to the land.</p>
+        </li>
+        <li class="service">
+          <div class="service-no" aria-hidden="true">02</div>
+          <h3>Entitlements</h3>
+          <p>Zoning and development approvals with Texas cities and counties.</p>
+        </li>
+        <li class="service">
+          <div class="service-no" aria-hidden="true">03</div>
+          <h3>Plats and engineering</h3>
+          <p>Preliminary and final plats, with civil engineering coordinated to schedule and budget.</p>
+        </li>
+        <li class="service">
+          <div class="service-no" aria-hidden="true">04</div>
+          <h3>Wastewater and TCEQ permits</h3>
+          <p>On-site wastewater treatment plants and the TCEQ permits they require.</p>
+        </li>
+        <li class="service">
+          <div class="service-no" aria-hidden="true">05</div>
+          <h3>Horizontal infrastructure</h3>
+          <p>Streets, water, sewer and drainage managed through construction.</p>
+        </li>
+        <li class="service">
+          <div class="service-no" aria-hidden="true">06</div>
+          <h3>Finished lots</h3>
+          <p>Homesites ready for homes, turned over to the owner or builder.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="wrap who">
+    <h2 class="h2">Who we work with.</h2>
+    <p>Community owners, investors and builders developing manufactured housing in Texas, whether the homesites will be leased or sold.</p>
+  </section>
+</main>
+
+<div class="navy" id="contact">
+  <section class="wrap contact" aria-labelledby="contact-heading">
+    <svg width="176" height="176" viewBox="0 0 200 200" fill="none" role="img" aria-label="MHC BUILD emblem">
+      <circle cx="100" cy="100" r="95" stroke="#FFFFFF" stroke-width="5"/>
+      <circle cx="100" cy="100" r="60" stroke="#FFFFFF" stroke-width="2.5"/>
+      <path id="emblem-top" d="M30,100 A70,70 0 0 1 170,100"/>
+      <path id="emblem-bottom" d="M15.5,100 A84.5,84.5 0 0 0 184.5,100"/>
+      <text fill="#FFFFFF" font-family="Archivo, sans-serif" font-weight="800" font-size="20" letter-spacing="3.4" text-anchor="middle" aria-hidden="true"><textPath href="#emblem-top" startOffset="50%">MHC BUILD</textPath></text>
+      <text fill="#FFFFFF" font-family="Archivo, sans-serif" font-weight="800" font-size="20" letter-spacing="6" text-anchor="middle" aria-hidden="true"><textPath href="#emblem-bottom" startOffset="50%">TEXAS</textPath></text>
+      <circle cx="22.5" cy="100" r="3.5" fill="#E0763A"/>
+      <circle cx="177.5" cy="100" r="3.5" fill="#E0763A"/>
+      <path d="M100,40 V53 M160,100 H147 M100,160 V147 M40,100 H53" stroke="#FFFFFF" stroke-width="2.5"/>
+      <polygon points="100,72 106.29,91.35 126.63,91.35 110.17,103.3 116.46,122.65 100,110.69 83.54,122.65 89.83,103.3 73.37,91.35 93.71,91.35" fill="#E0763A"/>
+      <circle cx="100" cy="100" r="3" fill="#12284A"/>
+    </svg>
+    <div class="contact-text">
+      <h2 class="h2" id="contact-heading">Have a site in Texas?</h2>
+      <p>Send us the county and the acreage and we will set up a call.</p>
+      <div class="contact-links">
+        <a href="tel:+18328625100">832-862-5100</a>
+        <a href="mailto:john@mhcbuild.com">john@mhcbuild.com</a>
+      </div>
+    </div>
+  </section>
+  <footer class="wrap footer">© 2026 MHC Build LLC · Manufactured housing communities · Texas</footer>
+</div>
+</body>
+</html>
